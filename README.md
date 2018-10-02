@@ -27,14 +27,14 @@ Running Tests
 
 Given the time limit I have, I did not write a test for this tool. However, one can test if the tool works via the followings.
 ```
-$ cd nutau_plotter/resources/plotting_scripts/
+$ cd resources/plotting_scripts/
 $ python plot_dragon1D.py --outdir plots/
 ```
 Now you should see a few 1D distribution plots from Analysis B (DRAGON sample) in `plots/`.
 
 Once the above is working, you can make all the plots provided by this code via
 ```
-$ cd nutau_plotter/resources/plotting_scripts/
+$ cd resources/plotting_scripts/
 $ bash run_all.sh plots/
 ```
 
