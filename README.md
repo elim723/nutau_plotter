@@ -15,9 +15,7 @@ $ eval `/cvmfs/icecube.opensciencegrid.org/py2-v3.0.1/setup.sh`
 ```
 3. To install this project, one should first clone it.
 ```
-$ mkdir nutau_plotter
-$ cd nutau_plotter/
-$ git clone https://github.com/elim723/nutau_plotter.git .
+$ git clone https://github.com/elim723/nutau_plotter.git nutau_plotter
 ```
 Then, install the pacakge locally.
 ```
