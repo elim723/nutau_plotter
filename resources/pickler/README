@@ -1,0 +1,20 @@
+Pickling scripts here can be ugly. Elim was not asked to make
+the pickling scripts, but she keeps the scripts here just in
+case they are needed in the future. 
+
+Better structures (such as making a `pickler` class to reduce
+the redundancy of the same codes in multiple scripts) can be,
+but is not, done. 
+
+Elim apologies for the messiness in the pickling tools, and
+she tries to leave as many useful comments as she can along
+the way.
+
+To run scripts in this folder, use the following enviornment
+
+$ eval `/cvmfs/icecube.opensciencegrid.org/py2-v2/setup.sh`
+$ bash /data/user/elims/software/greco_software/debug/env-shell.sh
+
+To see what data sets are used, see
+
+/data/user/elims/for_nutau_paper/picklingtools/datasets_location.txt

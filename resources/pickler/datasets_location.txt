@@ -1,0 +1,152 @@
+This textfile contains the information related to the source files from
+which Elim got the data sets in `resouces/pickled_data/`. Here, Elim
+only cares about selection variables at Level 4 and higher (i.e. Level 3
+variables are ignored).
+
+#################################################################
+#### GRECO
+#### 
+#### 1. Pickled files in `greco/preweighted/` are obtained
+####    from Michael's pickled files. These files are baseline
+####	only and do not have the info needed for re-weighting.
+#### 2. To pickle L4 and L5 variables from scratch, use level 5
+####    i3 files.
+#### 3. Pickled files in `greco/final/` are obtained from the
+#### 	Level 7 pickled files. These files include systematic
+####	sets and has everything needed for re-weighting.
+#################################################################
+
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Data
+| ====
+|
+| Levels  Format  Made by  Preweighted  Locations
+| ------  ------  -------  -----------	---------
+| L4	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level4/data/pickles/data.pckl
+|  	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/201X/12XXXX/
+| L5	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level5/data/pickles/data.pckl
+|  	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/201X/12XXXX/
+| L6	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level6/data/pickles/data.pckl
+|  	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level6/201X/12XXXX/
+| L7	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level7/data/pickles/data.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level7_5July2017/data/201X/
+| 	  pckl	  Michael  No		/data/ana/LE/NBI_nutau_appearance/current_pickle_files/current/merged_final/Level7_data_201X.pckl
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Corsika
+| =======
+|
+| Levels  Format  Made by  Preweighted  Locations
+| ------  ------  -------  -----------	---------
+| L4	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level4/data/pickles/corsika.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/corsika/11058/
+| L5	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level5/data/pickles/corsika.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/corsika/11058/
+| L6	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level6/data/pickles/corsika.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level6/corsika/11058/
+| L7	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level7/data/pickles/corsika.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level7_5July2017/corsika_questionableRates/11058/
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Muongun
+| =======
+|
+| Levels  Format  Made by  Preweighted  Locations
+| ------  ------  -------  -----------	---------
+| L4	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level4/data/pickles/muongun.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/muongun/0.99_new25/
+| L5	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level5/data/pickles/muongun.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/muongun/0.99_new25/
+| L6	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level6/data/pickles/muongun.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level6/muongun/0.99_new25/
+| L7	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level7/data/pickles/muongun.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level7_5July2017/muongun/0.XX_newXX/
+| 	  pckl	  Michael  No		/data/ana/LE/NBI_nutau_appearance/current_pickle_files/current/merged_final/Level7_muongun_0.XX_newXX_b.pckl
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Noise
+| =====
+|
+| Levels  Format  Made by  Preweighted  Locations
+| ------  ------  -------  -----------	---------
+| L4	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level4/data/pickles/noise.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/990015/
+| L5	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level5/data/pickles/noise.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/990015/
+| L6	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level6/data/pickles/noise.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level6/noise/990015/
+| L7	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level7/data/pickles/noise.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level7_5July2017/noise/990015/
+| 	  pckl	  Michael  No		/data/ana/LE/NBI_nutau_appearance/current_pickle_files/current/merged_final/Level7_noise_990015.pckl
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Neutrinos
+| =========
+|
+| Levels  Format  Made by  Preweighted  Locations
+| ------  ------  -------  -----------	---------
+| L4	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level4/data/pickles/genie_nuX.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/genie/1X640/
+| L5	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level5/data/pickles/genie_nuX.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level5/genie/1X640/
+| L6	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level6/data/pickles/genie_nuX.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level6/genie/1X640/
+| L7	  pckl	  Michael  Yes		/data/user/mlarson/tau_appearance/plots/level7/data/pickles/genie_nuX.pckl
+| 	  i3	  Michael  No		/data/ana/LE/NBI_nutau_appearance/level7_5July2017/genie/1XXXX/
+| 	  pckl	  Michael  No		/data/ana/LE/NBI_nutau_appearance/current_pickle_files/current/merged_final/Level7_genie_1XXXX.pckl
++-----------------------------------------------------------------------------------------------------------------------------------------
+
+#################################################################
+#### DRAGON
+####
+#### 1. Lower level datasets in DRAGON are made afterwards
+####    because i3Files at earlier levels by MSU group have
+####	a BDT > 0.1 cut. Those files cannot be used to make
+####	selection plots at lower selection levels.
+#### 2. Because files are made afterwards, the newer files
+#### 	have no L4 / 5 cuts applied.
+#### 3. No 'preweighted' files were created. But, Elim
+####    includes pre-calculated weights when pickling.
+#################################################################
+
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Data
+| ====
+|
+| Levels  Format  Made by  Locations
+| ------  ------  -------  ---------
+| L4	  hdf5	  FeiFei   /data/user/fhuang/Matt_level4_data/
+| 	  i3	  Elim     /data/user/elims/dragon_data/IC86_X/
+| L5	  hdf5	  FeiFei   /data/user/fhuang/Matt_level4_data/
+| 	  i3	  Elim     /data/user/elims/dragon_data/IC86_X/
+| L6	  hdf5	  Philipp  /data/user/peller/nutau/data/
+|  	  i3	  ana	   /data/ana/LE/published/DRAGON_3y/level5p/data/
+| 	  pckl	  Elim	   /data/user/elims/dragon_pickled/data.p
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Corsika
+| =======
+|
+| Levels   Format  Made by  Locations
+| ------   ------  -------  ---------
+| L4	   hdf5	  FeiFei   /home/fhuang/scratch/fhuang/corsika/Matt_L3_corsika_11058.hdf5
+| 	   i3	  Elim	   /data/user/elims/dragon_data/corsika/11058/
+| L5	   hdf5	  FeiFei   /home/fhuang/scratch/fhuang/corsika/Matt_L3_corsika_11058.hdf5
+| 	   i3	  Elim	   /data/user/elims/dragon_data/corsika/11058/
+| L6 (icc) hdf5	  FeiFei   /data/user/fhuang/icc_background/def2/Matt_L5b_icc_data_IC86_2_3_4_new_reco_def2.hdf5
+|    	   i3	  ana	   /data/user/fhuang/icc_background/def2/IC86_2(3,4)/
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Noise
+| =====
+|
+| Levels  Format  Made by  Locations
+| ------  ------  -------  ---------
+| L4	  i3	  Elim     /data/user/elims/dragon_data/noise/
+| L5	  i3	  Elim     /data/user/elims/dragon_data/noise/
+| L6	  -	  -	   -
++-----------------------------------------------------------------------------------------------------------------------------------------
+| Neutrinos
+| =========
+|
+| Levels   Format  Made by  Locations
+| ------   ------  -------  ---------
+| L4	   hdf5	  FeiFei   /data/user/fhuang/Matt_level3_mc/
+| L5	   hdf5	  FeiFei   /data/user/fhuang/Matt_level3_mc/
+| L6 	   hdf5	  Philipp  /data/user/peller/level5p_pisa_hdf5/
++-----------------------------------------------------------------------------------------------------------------------------------------
+
