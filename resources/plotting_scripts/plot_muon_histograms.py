@@ -45,9 +45,9 @@ scalars = {'greco' : greco_nyears * seconds_per_year,
 #########################################################
 ### directory where preweighted pickled
 ### data are located
-ppath  = os.path.dirname (os.path.realpath(__file__))
-filenames = {'greco' :ppath+'/../pickled_data/greco/preweighted/level7_muongun.pckl',
-             'dragon':ppath+'/../pickled_data/dragon/preweighted/level6_final_muon.pckl'}
+ppath  = '/data/user/elims/nutau_pickled_data/'
+filenames = {'greco' :ppath+'greco/preweighted/level7_muongun.pckl',
+             'dragon':ppath+'dragon/preweighted/level6_final_muon.pckl'}
 
 variables = {'greco' :['reco_logen', 'reco_coszen', 'tracklength'],
              'dragon':['reco_logen', 'reco_coszen', 'deltallh']   }

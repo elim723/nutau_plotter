@@ -38,8 +38,7 @@ scalar = greco_nyears * seconds_per_year
 ### directory where preweighted pickled
 ### data are located
 sample = 'greco'
-ppath  = os.path.dirname (os.path.realpath(__file__)) + \
-         '/../pickled_data/greco/preweighted/'
+ppath  = '/data/user/elims/nutau_pickled_data/greco/preweighted/'
 
 variables = ['reco_logen', 'reco_coszen', 'tracklength']
 

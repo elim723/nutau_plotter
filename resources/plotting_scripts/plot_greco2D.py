@@ -39,8 +39,7 @@ from plotter.printer import selection_printer_ender
 ### directory where preweighted pickled
 ### data are located
 sample = 'greco'
-ppath  = os.path.dirname (os.path.realpath(__file__)) + \
-         '/../pickled_data/greco/preweighted/'
+ppath  = '/data/user/elims/nutau_pickled_data/greco/preweighted/'
 
 #########################################################
 #### define variables related to Finite Reco cuts

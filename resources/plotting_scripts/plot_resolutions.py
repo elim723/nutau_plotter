@@ -53,7 +53,7 @@ warnings.filterwarnings("ignore")
 #### default variables
 ################################################
 from plotter.styler import labels
-from analyzesr.misc import default_edges as edges
+from analyzer.misc import default_edges as edges
 
 #### set oscillation setting in case
 #### no infile is provided
@@ -62,10 +62,11 @@ matter, inverted, oscnc = True, False, True
 #### default paths to greco and dragon
 #### samples at their final levels
 samples   = ['greco', 'dragon']
-path      = os.path.dirname(os.path.abspath( __file__ ))
-grecodir  = path + '/../pickled_data/greco/final/'
-dragondir = path + '/../pickled_data/dragon/final/'
-nufile    = path + '/../nufiles/nuparams_template.txt'
+path  = '/data/user/elims/nutau_pickled_data/'
+grecodir  = path + 'greco/final/'
+dragondir = path + 'dragon/final/'
+thispath  = os.path.dirname(os.path.abspath( __file__ ))
+nufile    = thispath + '/../events_collecter/nufiles/nuparams_template.txt'
 
 #### members   = individual member included
 #### datatypes = the data types to be plotted

@@ -29,8 +29,7 @@ from plotter.contour import Contour
 #### default variables
 ################################################
 #### filename to all numu 90% contours
-numu90s_filename = os.path.dirname (os.path.realpath(__file__)) + \
-                   '/../pickled_data/numu_contours.p'
+numu90s_filename = '/data/user/elims/nutau_pickled_data/numu_contours.p'
 
 ################################################
 #### plot formating / styling

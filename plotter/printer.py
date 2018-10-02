@@ -521,6 +521,44 @@ def muhist_printer_ender (outdir):
     selection_printer_ender (outdir)
     return
 
+#################################################################                                                           
+#### printers for syseffect plots (plot_sys_effects.py)                                                                     
+#################################################################                                                           
+def syseffects_printer_header (outdir):
+
+    ''' print header for systematic effecs in plot_sys_effects.py
+
+        :param outdir (str): folder to output plots
+        :param sample (str): either GRECO or DRAGON
+    '''
+
+    print ('################# plot systematic effects #################')
+    print ('#### Welcome! This script produces the systematic effecst')
+    print ('#### on histograms in percentage change.')
+    print ('#### All outputs will be found at ')
+    print ('####       {0}'.format (outdir))
+    print ('####')
+    return
+
+def syseffects_printer_events (events):
+
+    ''' print rates for muon histograms in plot_sys_effects.py
+
+        :param events (dict): event rates
+    '''
+
+    for dtype, event in events.items ():
+        collectsys_print_dtype (dtype, event, do_print=True)
+
+    return
+
+def syseffects_printer_ender (outdir):
+
+    ''' let user know where the plots are for systematic
+        effects on histograms in plot_sys_effects.py                                                                                        
+    '''
+    selection_printer_ender (outdir)
+    return
 
 #########################################################
 #### printers for greco numu plots (plot_greco_numu.py)

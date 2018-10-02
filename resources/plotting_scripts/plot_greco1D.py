@@ -53,8 +53,7 @@ from plotter.printer import selection_printer_ender
 ### data are located
 sample = 'greco'
 scalar = greco_scalar
-ppath  = os.path.dirname (os.path.realpath(__file__)) + \
-         '/../pickled_data/greco/preweighted/'
+ppath  = '/data/user/elims/nutau_pickled_data/greco/preweighted/'
 
 #########################################################
 #### define plot settings
