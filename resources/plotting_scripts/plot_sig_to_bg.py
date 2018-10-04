@@ -165,21 +165,12 @@ def get_events (filename):
             event[key.lower ()] = ddict[key][cut]
     return event
 
-def collect_events (infile):
+def collect_events ():
 
     ''' collect event variables as needed
 
         :return events (dict): all event variables needed
     '''
-
-    ### grab MC events from infile if available
-    if infile:
-        with open (infile, 'rb') as f:
-            events = cPickle.load (f)
-        f.close ()
-        ### print progress
-        sigtobg_printer_events (events)
-        return events
 
     ### holder for all events needed
     events = {}
@@ -210,17 +201,14 @@ if __name__ == "__main__":
     parser = OptionParser(usage=usage)
     parser.add_option ("--outdir", type="string", default='~/',
                        help = "out directory for plots")
-    parser.add_option ("--infile", type="string", default=None,
-                       help = "input files with all events")
     (options, args) = parser.parse_args()
     outdir  = options.outdir
-    infile  = options.infile
 
     #### print header
     sigtobg_printer_header (outdir, sample.upper ())
 
     #### get events
-    events = collect_events (infile)
+    events = collect_events ()
 
     #### want to stretch cascade bin?
     stretch_cscd = False if sample=='dragon' else \
