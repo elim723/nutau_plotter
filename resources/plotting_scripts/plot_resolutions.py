@@ -45,6 +45,11 @@ from plotter.printer import resolution_printer_ender
 from analyzer.nuparams import Nuparams
 from analyzer.library import Library
 
+## this append is needed for loading
+## files when resolutions need to be
+## recalculated
+sys.path.append ('../../analyzer/')
+
 ## ignore RuntimeWarning
 import warnings
 warnings.filterwarnings("ignore")
@@ -483,7 +488,7 @@ def get_resolutions (event, yaxis=None, xaxis=None):
     ## get y values at upper 1sigma / 50% / lower 1sigma
     return get_statistics (yvalues, xvalues, weights, binedge)
 
-def get_all_resolutions (combin, events):
+def get_all_resolutions (combin, events, verbose=False):
 
     ''' get resolutions from all four channels (numucc,
         nuecc, nutaucc, nunc) from all six combinations
@@ -519,10 +524,11 @@ def get_all_resolutions (combin, events):
                                                      yaxis=yaxis,
                                                      xaxis=xaxis)
             resolution_printer_res (combin, sample, dtype,
-                                    allres[dtype][sample])
+                                    allres[dtype][sample],
+                                    do_print=verbose)
     return allres
 
-def collect_resolutions (infile, outdir, gdir, ddir):
+def collect_resolutions (infile, outdir, gdir, ddir, verbose=False):
 
     ''' collect resolutions either from an input
         `infile` if provided or calculate resolutions                                                                                         
@@ -561,7 +567,7 @@ def collect_resolutions (infile, outdir, gdir, ddir):
 
     ### get resolutions for each sample
     ### and all 6 options
-    resolutions = {combin:get_all_resolutions (combin, events)
+    resolutions = {combin:get_all_resolutions (combin, events, verbose=verbose)
                    for combin in combinations}
 
     ### save resolutions for future
@@ -579,17 +585,20 @@ if __name__ == "__main__":
     ### parse user's options
     usage = "%prog [--outdir plots/ --infile classified.p]"
     parser = OptionParser(usage=usage)
-    parser.add_option( "-o", "--outdir", type="string", default='~/',
+    parser.add_option ("--outdir", type="string", default='~/',
                        help = "out directory for plotting")
-    parser.add_option( "-i", "--infile", type="string", default=None,
+    parser.add_option ("--infile", type="string", default=None,
                        help = "pre-calculated track-like fractions")
-    parser.add_option( "-d", "--dragondir", type="string", default=dragondir,
+    parser.add_option ("--dragondir", type="string", default=dragondir,
                        help = "path to DRAGON final data sets")
-    parser.add_option( "-g", "--grecodir", type="string", default=grecodir,
+    parser.add_option ("--grecodir", type="string", default=grecodir,
                        help = "path to GRECO final data sets")
+    parser.add_option ("--verbose", action="store_true", default=False,
+                       help = "If True, print x / y values.")
     (options, args) = parser.parse_args()
     outdir = options.outdir
     infile = options.infile
+    verbose = options.verbose
     grecodir  = options.grecodir
     dragondir = options.dragondir
 
@@ -601,7 +610,8 @@ if __name__ == "__main__":
     ##  {combin: {dtype: {sample: {'xvalues':[],
     ##                             'lsigma' :[],
     ##                             'usigma' :[] }}}}
-    resolutions = collect_resolutions (infile, outdir, grecodir, dragondir)
+    resolutions = collect_resolutions (infile, outdir, grecodir,
+                                       dragondir, verbose=verbose)
     
     ### plot
     plot_resolutions (outdir, resolutions)

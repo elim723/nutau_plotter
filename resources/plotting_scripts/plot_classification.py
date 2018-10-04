@@ -36,11 +36,7 @@ from glob import glob
 import numpy as np
 
 ## custum analysis tool
-try:
-    from analyzer import nuparams, library
-except:
-    print ('Warning: No IceCube software is found.')
-    pass
+from analyzer import nuparams, library
 
 ## custum functions
 from plotter.classification import Classification 
@@ -49,9 +45,14 @@ from plotter.printer import classification_printer_events
 from plotter.printer import classification_printer_rates
 from plotter.printer import classification_printer_ender
 
+## this append is needed for loading
+## files when track fractions need
+## to be recalculated
+sys.path.append ('../../analyzer/')
+
 ## ignore RuntimeWarning
 import warnings
-warnings.filterwarnings("ignore")
+warnings.filterwarnings ("ignore")
 
 ################################################
 #### default variables
@@ -152,14 +153,14 @@ def get_weights (lib):
                                    and weights in terms of member
                                    (i.e. individual NC)
     '''
-
+    
     ### define parameter values for weighting
     ### from `nufiles/nuparam_textfile.txt`
-    nuparams = Nuparams (nufile, isinverted=inverted)
+    nuparam = nuparams.Nuparams (nufile, isinverted=inverted)
     
     ### set up weighters for baseline
     ### members using injected values
-    injected = nuparams.extract_params ('injected')
+    injected = nuparam.extract_params ('injected')
     lib.set_weighters (injected, matter=matter, oscnc=oscnc)
 
     ### loop through each member
@@ -223,9 +224,9 @@ def get_events (grecodir, dragondir):
         ## define ppath where pickled data are
         ppath = eval (sample + 'dir')
         ## initialize library instance
-        lib = Library (members, ppath, edges=edges,
-                       isdragon=sample=='dragon',
-                       verbose=0)
+        lib = library.Library (members, ppath, edges=edges,
+                               isdragon=sample=='dragon',
+                               verbose=0)
         ## get weights
         events_in_members = get_weights (lib)
         

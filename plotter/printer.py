@@ -386,7 +386,7 @@ def resolution_printer_rates (events):
     return
 
 def resolution_printer_res (combination, sample,
-                            member, res):
+                            member, res, do_print=False):
 
     ''' print the resolution info of a given
         x/y combination, a given data type, a
@@ -398,12 +398,13 @@ def resolution_printer_res (combination, sample,
         :param res         (dict): resolution info
     '''
 
-    print ('+-----------------------------------------')
-    print ('| {0} {1} ...'.format (sample, member))
-    print ('|     xaxis: {0}'.format (combination.split ('_')[0]))
-    print ('|     yaxis: {0}'.format (combination.split ('_')[1]))
-    for key, value in res.items ():
-        print ('|        {0:7}: {1}'.format (key, value))
+    if do_print:
+        print ('+----------------------------------------------------')
+        print ('| {0} {1} ...'.format (sample, member))
+        print ('|     xaxis: {0}'.format (combination.split ('_')[0]))
+        print ('|     yaxis: {0}'.format (combination.split ('_')[1]))
+        for key, value in res.items ():
+            print ('|        {0:7}: {1}'.format (key, value))
     return
     
 def resolution_printer_ender (outdir):

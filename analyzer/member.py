@@ -15,15 +15,15 @@
 
 from __future__ import print_function
 import numpy as np
-import os, cPickle
+import os, cPickle, sys
 
+from analyzer import misc, weightcalculator
 from misc import Map, Toolbox
-import weightcalculator
 
 ####################################################################
 #### import constants needed
 ####################################################################
-from nuparams import discrete_parameters as dparams
+from analyzer.nuparams import discrete_parameters as dparams
 
 from misc import datatypes, seconds_per_year, default_ranges, greco_nyears
 from misc import default_nu_sysvalues, default_mu_sysvalues
@@ -198,7 +198,7 @@ class Member (object):
 
                 try:
                         with open (self._pfile, "rb") as f:
-                                ddict = cPickle.load(f)
+                                ddict = cPickle.load (f)
                         f.close()
                         return self._select_events (ddict)
                 except IOError:

@@ -18,8 +18,8 @@ import socket, time
 #### Prob3 essential
 ###########################################################################
 from icecube import prob3 as BargerPropagator
-datdir = '/data/user/elims/software/'
-earth_model = datdir + 'ir041102/src/prob3/resources/oscillations/PREM_60layer.dat'
+datdir = '/data/user/elims/nutau_software/'
+earth_model = datdir + 'src/prob3/resources/oscillations/PREM_60layer.dat'
 detector_depth = 2.
 prop_height    = 20.
 barger_prop = BargerPropagator.BargerPropagator (earth_model, detector_depth)
