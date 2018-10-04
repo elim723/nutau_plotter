@@ -127,7 +127,7 @@ def collect_contours ():
 #### main function
 #############################################
 if __name__ == "__main__":
-7
+
     ### parse user's options
     usage = "%prog [--outdir plots/]"
     parser = OptionParser (usage=usage)
