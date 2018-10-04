@@ -22,6 +22,7 @@ Then, enter the folder and install the pacakge locally.
 $ cd nutau_plotter/
 $ python setup.py install --user
 ```
+
 Running Tests
 -------------
 
@@ -41,7 +42,7 @@ $ bash run_all.sh plots/
 Plotting Scripts Overview
 -------------------------
 
-If you are just changing the plotting styles, `resources/plotting_scripts/` are the plotting scripts. I tried to make the scripts as generalized as possible, such that user can change any plotting options via dictionaries. For example, in `plot_dragon1D.py`, there is a `format_global` variable:
+If you are just changing the plotting styles, `resources/plotting_scripts/` are the plotting scripts. Please refer to the README.md in that folder for more information. I tried to make the scripts as generalized as possible, such that user can change any plotting options via dictionaries. For example, in `plot_dragon1D.py`, there is a `format_global` variable:
 
 ```
 format_global = {'plottotalmc'          :False           ,
@@ -74,7 +75,3 @@ $ bash /data/user/elims/nutau_software/debugv3/env-shell.sh
 ```
 Please note that these are the latest software at the time (10/02/2018). Updated software may create conflicts.
 
-Final Notes
-===========
-
-I do not have time to write a webpage-style documentations. But please do read through each README and comments in scripts to understand the purpose of each script, how to run it, and how to change the plotting styles.
